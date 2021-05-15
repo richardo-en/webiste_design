@@ -4,15 +4,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-  return render_template('home.html' , nadpis = "Home")
+  return render_template('layout.html' , nadpis = "Home")
 
-@app.route("/contact.html")
+@app.route("/contact")
 def sorry():
-  return render_template('sorry.html' , nadpis = "Sorry")
+  return render_template('contact.html' , nadpis = "Sorry")
 
 """@app.route("/description")
 def description():
   return render_template('description.html' , nadpis = "Description")"""
   
 if __name__ == "__main__":
-    app.run(debug=True , port=2450)
+    app.run(debug=True , port=2451)
