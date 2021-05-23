@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
+
+<nav id="navbar">
+    <a href="" class="brand">Brand logo</a>
+    <ul>
+        <a href="{{ url_for('home') }}"><button>Home</button></a>
+        <a href="{{ url_for('contact') }}"><button>Contact Us!</button></a>
+    </ul>
+</nav>
+
 <div class="topBarSpace">
     <div class="topBar"></div>
     <div class="line"></div>
@@ -9,9 +18,28 @@
     <div class="line5"></div>
 </div>
 
+<div class="about-article reveal">
+    <img src="/static/ragnar.jpg" alt="" class="reveal right">
+    <div class="text-right reveal">
+        <h1>Lorem</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Placeat ea id expedita alias hic similique nobis facere,
+            vitae sunt odio molestias cumque quasi quaerat excepturi
+            debitis nam. Deleniti, voluptates placeat!
+        </p>
+    </div>
+</div>
 
-<div class="bot-navig">
-    <a href="{{ url_for('contact') }}"><button class="btn"> Contact Us!</button></a>
-    <a href="{{ url_for('home') }}"><button class="btn"> Home</button></a>
-</div> 
+<div class="about-article reveal">
+    <img src="/static/ragnar.jpg" alt="" class="reveal left">
+    <div class="text-left reveal">
+        <h1>Lorem</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Placeat ea id expedita alias hic similique nobis facere,
+            vitae sunt odio molestias cumque quasi quaerat excepturi
+            debitis nam. Deleniti, voluptates placeat!
+        </p>
+    </div>
+</div>
+
 {% endblock %}

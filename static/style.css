@@ -31,7 +31,6 @@ canvas{
 /* ABOUT PAGE LANDING DESIGN */
 /* ABOUT PAGE LANDING DESIGN */
 .topBarSpace{
-    position: absolute;
     top: 0;
     width: 100%;
     height: 400px;
@@ -88,6 +87,61 @@ canvas{
     width: 100%;
     height: 400px;
     top: 0;
+}
+/*----------------------------*/
+
+.about-article{
+    height: 50vh;
+    width: 100vw;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    background-color: rgb(20, 20, 20);
+    opacity: 50%;
+    transform: translateY(20%);
+    transition: all 1s ease; 
+    display: flex;
+}
+.about-article.active{
+    transform: translateY(0);
+    opacity: 100%;
+}
+
+.about-article img.right{
+    width: 30%;
+    height: 80%;
+    object-fit: cover;
+    margin-top: 50px;
+    margin-left: 50px;
+    opacity: 50%;
+    transform: translateX(-50%);
+    transition: all 2.5s ease; 
+}
+.about-article img.active{
+    opacity: 100%;
+    transform: translate(0);
+}
+
+.about-article .text-right{
+    background-color: white;
+    padding: 8px;
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 0.3em;
+    width: 20%;
+    height: 60vh;
+    margin-right: 25px;
+    margin-left: 30%;
+    transform: translateY(5vh);   
+    opacity: 50%;
+    transition: all 2.5s ease; 
+}
+.about-article .text-right p,
+.about-article .text-left p{
+    font-size: x-large;
+}
+.about-article .text-right.active{
+    transform: translateY(-5vh);   
+    opacity: 100%;
 }
 /* END OF ABOUT PAGE LANDING DESIGN */
 /* END OF ABOUT PAGE LANDING DESIGN */
