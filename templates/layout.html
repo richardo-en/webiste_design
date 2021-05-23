@@ -6,96 +6,152 @@
         <link href="/static/style.css" rel="stylesheet">
         <title>{{ nadpis }}</title>
     </head>
-    <body class="">
-        
+    <body>
+
         {% block content %}
-        <nav>
-            <div class="banner1"  >
+        <nav id="navbar">
+            <a href="" class="brand">Brand logo</a>
+            <ul>
+                <a href="{{ url_for('about') }}"><button>About Us!</button></a>
+                <a href="{{ url_for('contact') }}"><button>Contact Us!</button></a>
+            </ul>
+        </nav>
+
+        <nav class="landing-animation">
+            
+            <div class="banner1">
                 <img src="/static/ragnar.jpg" class="obrazek" alt="">
-                <div class="text-box absolute">
-                    <p class="">Stoly </p>
-                    <p class="">na mieru</p>
+                <div class="text-box">
+                    <h1>Stoly </h1>
+                    <span></span>
+                    <h1>na mieru</h1>
                 </div>
             </div>
+
+            
         
             <div class="banner2">
                 <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" class="obrazek" alt="">
-                <div class="text-box absolute">
-                    <p class="">Pre </p>
-                    <p class="">Kazdeho</p>
+                <div class="text-box">
+                    <h1>Pre </h1>
+                    <span></span>
+                    <h1>Kazdeho</h1>
                 </div>
             </div>
         
             <div class="banner3">
                 <img src="/static/a1916302_large.jpg" class="obrazek" alt="">
-                <div class="text-box absolute">
-                    <p class="">Len od </p>
-                    <p class="">1000000$ vyssie</p>
+                <div class="text-box">
+                    <h1>Len od </h1>
+                    <span></span>
+                    <h1>1000000$ vyssie</h1>
                 </div>
             </div>
         
             <div class="banner4">
-                <img src="/static/ragnar.jpg" class="obrazek" alt="">
-                <div class="text-box absolute">
-                    <p class="">Nerobim zadarmenko</p>
-                    <p class="">na mieru</p>
+                <img src="/static/ragnar.jpg" class="obrazek" alt="">            
+                <div class="text-box">
+                    <h1>Nerobim zadarmenko</h1>
+                    <span></span>
+                    <h1>na mieru</h1>
                 </div>
             </div>
-        </nav>
-        <div class="slider">
 
-        </div>
-            
+        </nav>
         
+        <canvas class="cool-anim"></canvas>
+
+        <div class="article reveal">
+            <div class="bg-art-col reveal right"></div>
+            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="reveal right images" >
+            <section class="text reveal left">
+                <h1 class="reveal">Title</h1>
+                <p class="reveal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
+                    metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
+                </p>
+            </section>
+        </div>    
         
-        <div class="min-h-screen">
-            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="w-3/4 h-auto" style="margin-left: 12.50%;">
-            <p class="px-5 py-2 text-white text-xl md:text-2xl tracking-wider md:tracking-widest">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
-                metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
-                eleifend elementum. Aliquam dictum nisl tristique semper pretium. 
-        
-            </p>
-        </div>
-        
-        <div class="mb-5 h-screen">
-            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="w-full h-auto">
-            <p class="px-5 py-2 text-white text-xl md:text-2xl tracking-wider md:tracking-widest">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
-                metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
-        </div>
-        
-        <div class="mb-5 h-screen">
-            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="w-full h-auto">
-            <p class="px-5 py-2 text-white text-xl md:text-2xl tracking-wider md:tracking-widest">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
-                metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
-                eleifend elementum. Aliquam dictum nisl tristique semper pretium. 
-        
-            </p>
-        </div>
-        
-        <div class="mb-5">
-            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="w-full h-auto">
-            <p class="px-5 py-2 text-white text-xl md:text-2xl tracking-wider md:tracking-widest">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
-                metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
-        
-            </p>
-        </div>
+        <div class="article reveal">
+            <div class="bg-art-col reveal left"></div>
+            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="reveal left images">
+            <section class="text reveal right">
+                <h1 class="reveal">Title</h1>
+                <p class="reveal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
+                    metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
+                </p>
+            </section>
+        </div>  
         {% endblock %} 
-        <nav class="mt-5 relative bottom-0 w-full">
-            <button class="w-full h-20 bg-yellow-900 text-white text-xl hover:bg-yellow-800">Test</button>
-            <button class="w-full h-20 bg-yellow-900 text-white text-xl hover:bg-yellow-800">Test 2!</button>
-        </nav> 
+        <script>
+            window.addEventListener('scroll' , reveal)
+
+            function reveal(){
+                var reveals = document.querySelectorAll(".reveal");
+            
+                for(var i = 0 ; i < reveals.length; i++ ){
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 100;
+                
+                    if(revealtop < windowheight - revealpoint){
+                        reveals[i].classList.add('active');
+                    }else{
+                        reveals[i].classList.remove('active');
+                    }
+                }
+            }
+
+            var lastScrollTop = 0;
+                navbar = document.getElementById("navbar");
+            window.addEventListener("scroll" , function(){
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if(scrollTop > lastScrollTop){
+                    navbar.style.top = "-80px";
+                }else{
+                    navbar.style.top = "0";
+                }
+                lastScrollTop = scrollTop
+            })
+        </script>
+        <script>
+            const html = document.documentElement;
+            const canvas = document.querySelector('.cool-anim');
+            const context = canvas.getContext('2d');
+
+            const currentFrame = index => (
+                '20210523_091101_${index.toString().padStart(4 , '0')}.jpg',
+            )
+
+            const frameCount = 30;
+
+            canvas.height = 1920;
+            canvas.width = 1080;
+            const img = new Image();
+            img.src = currentFrame(1);
+            img.onload = function(){
+                context.drawImage(img , 0 , 0)
+            }
+
+            const updateImage = index => {
+                img.src = currentFrame(index)
+                context.drawImage(img , 0 , 0);
+            }
+
+            window.addEventListener('scroll' , () =>{
+                const scrollTop = html.scrollTop;
+                const maxScrollTop = html.scrollHeight - window.innerHeight;
+                const scrollFraction = scrollTop / maxScrollTop;
+                const frameIndex = Math.min(frameCount - 1 , Math.floor(scrollFraction * frameCount))
+                requestAnimationFrame( () => updateImage(frameIndex + 1))
+            })
+        </script>
     </body>
 
 </html>

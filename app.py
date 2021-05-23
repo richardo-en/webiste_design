@@ -7,12 +7,12 @@ def home():
   return render_template('layout.html' , nadpis = "Home")
 
 @app.route("/contact")
-def sorry():
+def contact():
   return render_template('contact.html' , nadpis = "Sorry")
 
-"""@app.route("/description")
-def description():
-  return render_template('description.html' , nadpis = "Description")"""
+@app.route("/about")
+def about():
+  return render_template('about.html' , nadpis = "Description")
   
 if __name__ == "__main__":
     app.run(debug=True , port=2451)
