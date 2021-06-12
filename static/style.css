@@ -2,152 +2,87 @@ body{
     background-color: black; 
     overflow-x: hidden;
     margin: 0;
+    width: 100vw;
+    height: 100vh;    
 }
-::-webkit-scrollbar{
-    display: none;
-}
-/* VIDEO TEST START ANIMATION */
-/* VIDEO TEST START ANIMATION */
-/* VIDEO TEST START ANIMATION */
-.cool-anim{
+.container{
+    width: 100vw;
     height: 100vh;
-    width: 100vw;
-    z-index: 1000;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    /*margin-top: 10vh;*/
+    animation: ForLoading 0s ease;
 }
-canvas{
-    left: 50%;
-    top: 50%;
-    transform:  translate(-50% , -50%);
-    max-height: 100vh;
-    max-width: 100vw;
+@keyframes ForLoading{
+    0%{
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    99%{
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        display: contents;
+    }
 }
-
-/* VIDEO TEST END ANIMATION */
-/* VIDEO TEST END ANIMATION */
-/* VIDEO TEST END ANIMATION */
-
-
-/* ABOUT PAGE LANDING DESIGN */
-/* ABOUT PAGE LANDING DESIGN */
-/* ABOUT PAGE LANDING DESIGN */
-.topBarSpace{
-    top: 0;
-    width: 100%;
-    height: 400px;
-}
-.topBarSpace .topBar{
-    width: 100%;
-    height: 400px;
-    clip-path: polygon(0 0, 100% 0%, 18% 95%, 0% 100%);
-    background-color: #304f54;
-    z-index: 10;
-}
-.topBarSpace .line{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 400px;
-    clip-path: polygon(0 96%, 0 100%, 100% 90%, 100% 83%);
-    background-color:wheat;
-    z-index: 150;
-}
-.topBarSpace .line2{
-    clip-path: polygon(17% 95%, 20% 95%, 100% 0, 100% 0);
-    background-color:wheat;
-    z-index: 150;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    top: 0;
-}
-.topBarSpace .line3{
-    clip-path: polygon(52% 55%, 100% 45%, 100% 0, 100% 0);
-    background-color:#a9af83;
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    top: 0;
-}
-.topBarSpace .line4{
-    clip-path: polygon(53% 54%, 100% 0, 75% 0);
-    opacity: 50%;
-    background-color:#a9af83;
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    top: 0;
-}
-.topBarSpace .line5{
-    clip-path: polygon(52% 55%, 100% 45%, 100% 83%, 20% 95%);
-    background-color:#542e41;
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    top: 0;
-}
-/*----------------------------*/
-
-.about-article{
-    height: 50vh;
-    width: 100vw;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
-    background-color: rgb(20, 20, 20);
-    opacity: 50%;
-    transform: translateY(20%);
-    transition: all 1s ease; 
-    display: flex;
-}
-.about-article.active{
-    transform: translateY(0);
-    opacity: 100%;
-}
-
-.about-article img.right{
-    width: 30%;
-    height: 80%;
-    object-fit: cover;
-    margin-top: 50px;
-    margin-left: 50px;
-    opacity: 50%;
-    transform: translateX(-50%);
-    transition: all 2.5s ease; 
-}
-.about-article img.active{
-    opacity: 100%;
-    transform: translate(0);
-}
-
-.about-article .text-right{
-    background-color: white;
+h1{
     padding: 8px;
     text-align: center;
     font-family: monospace;
+    letter-spacing: 0.5em;
+    /*opacity: 0%;*/
+    transition: all 3s ease;
+}
+
+p{
+    font-family: sans-serif;
     letter-spacing: 0.3em;
-    width: 20%;
-    height: 60vh;
-    margin-right: 25px;
-    margin-left: 30%;
-    transform: translateY(5vh);   
-    opacity: 50%;
-    transition: all 2.5s ease; 
+    line-height: 170%;
+    padding-right: 8px;
+    padding-left: 15px;
+    /*opacity: 0%;*/
+    transition: all 3s ease;
 }
-.about-article .text-right p,
-.about-article .text-left p{
-    font-size: x-large;
-}
-.about-article .text-right.active{
-    transform: translateY(-5vh);   
-    opacity: 100%;
-}
-/* END OF ABOUT PAGE LANDING DESIGN */
-/* END OF ABOUT PAGE LANDING DESIGN */
-/* END OF ABOUT PAGE LANDING DESIGN */
+/*::-webkit-scrollbar{
+    display: none;
+}*/
+/* VIDEO TEST START ANIMATION */
+/* VIDEO TEST START ANIMATION */
+/* VIDEO TEST START ANIMATION */
 
+canvas {
+    margin: 5% 0 5% 0;
+    width: 100%;
+    height: auto;
+}
 
+.loading_anim{
+    background-color: black;
+    width: 100vw;
+    max-height: 100vh;
+    animation: loading-anim ease 0s;
+    opacity: 0%;
+}
+.loading_anim img{
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+@keyframes loading-anim {
+    0%{
+        opacity: 0%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        display: none;
+    }
+}
 
 /* top bar animation video  */
 /* top bar animation video  */
@@ -156,8 +91,9 @@ canvas{
     margin: 0;
     padding: 0;
     height: 100vh;
-    max-width: 100%;
-    margin-bottom: 20vh;    
+    max-width: 100%;    
+    position: relative;
+    scroll-snap-align: end;
 }
 .landing-animation .banner1 , 
 .landing-animation .banner2 , 
@@ -169,7 +105,6 @@ canvas{
     height: 100%;
     left: 0;
     top: 0;   
-    
 }
 .obrazek{
     position: absolute;
@@ -310,6 +245,22 @@ canvas{
         visibility: visible;
     }
 }
+.landing-animation section{
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.171);
+    position: absolute;
+    margin-top: 81vh;
+}
+.landing-animation section button{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.171);
+
+}
 /* END OF ANIMATION TOP BAR */
 /* END OF ANIMATION TOP BAR */
 /* END OF ANIMATION TOP BAR */
@@ -389,11 +340,36 @@ nav#navbar ul a{
         object-fit: cover;
     }
 }
-.article{
-    width: 100%;
-    min-height: 100vh;
-    margin-bottom: 20vh;
-    margin-top: 20vh;
+.article , .items{
+    width: 100vw;
+    height: 101vh;
+    /*margin-bottom: 20vh;
+    margin-top: 20vh;*/
+    scroll-snap-align: end;
+}
+.items{
+    display: flex;
+    align-items: center;
+}
+.items p{
+    left: 0;
+    color: white;
+    justify-content: left;
+}
+.items .buttons {
+    display: block;
+    float: right;
+}
+.items .buttons button {
+    width: 20vw;
+    height: 10vh;
+}
+
+.article:nth-of-type(2){
+    background-color: rgb(68, 68, 68);
+}
+.article:nth-of-type(1){
+    background-color: rgb(255, 126, 126);
 }
 /*----------------------*/
 .bg-art-col{
@@ -439,12 +415,11 @@ nav#navbar ul a{
 .text{
     margin-top: 12vh;
     width: 40vw;
-    padding:  8px 8px 8px 8px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     background-color: white;
     opacity: 0%;    
     border-radius: 0.5rem;
-    transition: all 3s ease;
+    transition: all 5s ease;
     transform: translateY(50px);
 }
 .text.left{
@@ -455,33 +430,7 @@ nav#navbar ul a{
     margin-right: 8vw;
 }
 
-.text.active{
+.article.active .text{
     transform: translateY(0);
-    opacity: 90%;
-}
-.text h1{
-    padding: 8px;
-    text-align: center;
-    font-family: monospace;
-    letter-spacing: 0.5em;
-    opacity: 0%;
-    transition: all 3s ease;
-}
-
-.text p{
-    font-family: sans-serif;
-    letter-spacing: 0.3em;
-    line-height: 170%;
-    padding-right: 8px;
-    padding-left: 15px;
-    opacity: 0%;
-    transition: all 3s ease;
-}
-.text h1.active , .text p.active{
     opacity: 100%;
 }
-
-
-/* END OF ARTICLE RIGHT */
-/* END OF ARTICLE RIGHT */
-/* END OF ARTICLE RIGHT */

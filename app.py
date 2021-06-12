@@ -10,9 +10,6 @@ def home():
 def contact():
   return render_template('contact.html' , nadpis = "Sorry")
 
-@app.route("/about")
-def about():
-  return render_template('about.html' , nadpis = "Description")
   
 if __name__ == "__main__":
     app.run(debug=True , port=2451)

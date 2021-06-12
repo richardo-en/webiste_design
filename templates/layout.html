@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/static/style.css" rel="stylesheet">
-        <title>{{ nadpis }}</title>
-    </head>
-    <body>
 
-        {% block content %}
-        <nav id="navbar">
-            <a href="" class="brand">Brand logo</a>
-            <ul>
-                <a href="{{ url_for('about') }}"><button>About Us!</button></a>
-                <a href="{{ url_for('contact') }}"><button>Contact Us!</button></a>
-            </ul>
-        </nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/style.css" rel="stylesheet">
+    <title>{{ nadpis }}</title>
+</head>
 
+<body>
+    <div class="loading_anim">
+        <img src="/static/a1916302_large.jpg" alt="">
+    </div>
+    {% block content %}
+
+
+
+
+    <!--<nav id="navbar">
+        <a href="" class="brand">Brand logo</a>
+        <ul>
+            <a href="{{ url_for('contact') }}"><button>Contact Us!</button></a>
+        </ul>
+    </nav>-->
+
+
+    <div class="container" id="container">       
         <nav class="landing-animation">
-            
-            <div class="banner1">
-                <img src="/static/ragnar.jpg" class="obrazek" alt="">
+
+            <div class="banner1 items">
+                <img src="/static/ragnar.jpg" class="obrazek items" alt="">
                 <div class="text-box">
                     <h1>Stoly </h1>
                     <span></span>
@@ -28,8 +37,8 @@
                 </div>
             </div>
 
-            
-        
+
+
             <div class="banner2">
                 <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" class="obrazek" alt="">
                 <div class="text-box">
@@ -38,7 +47,7 @@
                     <h1>Kazdeho</h1>
                 </div>
             </div>
-        
+
             <div class="banner3">
                 <img src="/static/a1916302_large.jpg" class="obrazek" alt="">
                 <div class="text-box">
@@ -47,92 +56,120 @@
                     <h1>1000000$ vyssie</h1>
                 </div>
             </div>
-        
+
             <div class="banner4">
-                <img src="/static/ragnar.jpg" class="obrazek" alt="">            
+                <img src="/static/ragnar.jpg" class="obrazek" alt="">
                 <div class="text-box">
                     <h1>Nerobim zadarmenko</h1>
                     <span></span>
                     <h1>na mieru</h1>
                 </div>
             </div>
+            <!-- MOZNO MOZNO MOZNO -->
+            <section >
+                <a href="http://127.0.0.1:2451#first_art">
+                    <button>	
+                        &#8595;
+                    </button>
+                </a>
 
-        </nav>
-        
-        <canvas class="cool-anim"></canvas>
-
-        <div class="article reveal">
-            <div class="bg-art-col reveal right"></div>
-            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="reveal right images" >
-            <section class="text reveal left">
-                <h1 class="reveal">Title</h1>
-                <p class="reveal">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
-                    metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                    Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
-                </p>
             </section>
-        </div>    
-        
+        </nav>
+
+        <div class="items">
+
+        </div>
+
+        <div class="items">
+            <p id="changeText">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                Voluptatibus quia quaerat deleniti pariatur distinctio Illum,
+                quam eum maiores, at exercitationem delectus officiis hic officia 
+                perferendis aliquid aperiam ad beatae temporibus
+            </p>
+            <section class="buttons">
+                <button type="button" onclick='document.getElementById("changeText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatibus quia quaerat deleniti pariatur distinctio Illum, quam eum maiores, at exercitationem delectus officiis hic officia perferendis aliquid aperiam ad beatae temporibus"'>preco</button>
+                <button type="button" onclick='document.getElementById("changeText").innerHTML = " Voluptatibus quia quaerat deleniti pariatur distinctio. Illum,"'>co</button>
+                <button type="button" onclick='document.getElementById("changeText").innerHTML = "quam eum maiores, at exercitationem delectus officiis hic officia "'>naco</button>
+                <button type="button" onclick='document.getElementById("changeText").innerHTML = "perferendis aliquid aperiam ad beatae temporibus."'>zaco</button>
+            </section>
+        </div>
+
         <div class="article reveal">
-            <div class="bg-art-col reveal left"></div>
+            <!-- <div class="bg-art-col reveal left"></div>-->
             <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="reveal left images">
             <section class="text reveal right">
-                <h1 class="reveal">Title</h1>
-                <p class="reveal">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Cras vitae dolor ultricies, consectetur tellus ut, tincidunt 
+                <h1>Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Cras vitae dolor ultricies, consectetur tellus ut, tincidunt
                     metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                    Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur 
+                    Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur
                 </p>
             </section>
-        </div>  
-        {% endblock %} 
-        <script>
-            window.addEventListener('scroll' , reveal)
+        </div>
+    </div>
 
-            function reveal(){
-                var reveals = document.querySelectorAll(".reveal");
-            
-                for(var i = 0 ; i < reveals.length; i++ ){
-                    var windowheight = window.innerHeight;
-                    var revealtop = reveals[i].getBoundingClientRect().top;
-                    var revealpoint = 100;
-                
-                    if(revealtop < windowheight - revealpoint){
-                        reveals[i].classList.add('active');
-                    }else{
-                        reveals[i].classList.remove('active');
-                    }
+
+
+    {% endblock %}
+    <script>
+        document.getElementById("container").addEventListener('scroll', reveal)
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 35;
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
                 }
             }
+        }
 
-            var lastScrollTop = 0;
-                navbar = document.getElementById("navbar");
-            window.addEventListener("scroll" , function(){
-                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                if(scrollTop > lastScrollTop){
-                    navbar.style.top = "-80px";
-                }else{
-                    navbar.style.top = "0";
-                }
-                lastScrollTop = scrollTop
-            })
-        </script>
-        <script>
+        var lastScrollTop = -1;
+        navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = "-80px";
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop
+        })
+
+            loadingAnim = document.querySelector('.loading_anim');
+            setTimeout(function () {
+                loadingAnim.parentElement.removeChild(loadingAnim);
+            }, 0);
+
+    </script>
+    <!--<script>
             const html = document.documentElement;
             const canvas = document.querySelector('.cool-anim');
             const context = canvas.getContext('2d');
 
             const currentFrame = index => (
-                '20210523_091101_${index.toString().padStart(4 , '0')}.jpg',
+                `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
             )
 
-            const frameCount = 30;
+            const preloadImages = () => {
+            for (let i = 1; i < frameCount; i++) {
+                const img = new Image();
+                img.src = currentFrame(i);
+                }
+            };
 
-            canvas.height = 1920;
-            canvas.width = 1080;
+            const frameCount = 147;
+
+            canvas.height = 770;
+            canvas.width = 1158;
             const img = new Image();
             img.src = currentFrame(1);
             img.onload = function(){
@@ -151,7 +188,9 @@
                 const frameIndex = Math.min(frameCount - 1 , Math.floor(scrollFraction * frameCount))
                 requestAnimationFrame( () => updateImage(frameIndex + 1))
             })
-        </script>
-    </body>
+
+            preloadImages()
+        </script>-->
+</body>
 
 </html>
