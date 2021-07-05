@@ -5,27 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/static/style.css" rel="stylesheet">
-    <title>{{ nadpis }}</title>
+    <title>wooden monopoly</title>
 </head>
 
 <body>
-    <div class="loading_anim">
+    <!--<div class="loading_anim">
         <img src="/static/a1916302_large.jpg" alt="">
-    </div>
-    {% block content %}
+    </div>-->
 
-
-
-
-    <!--<nav id="navbar">
-        <a href="" class="brand">Brand logo</a>
-        <ul>
-            <a href="{{ url_for('contact') }}"><button>Contact Us!</button></a>
-        </ul>
-    </nav>-->
-
-
-    <div class="container" id="container">       
+    <div class="container" id="container">
         <nav class="landing-animation">
 
             <div class="banner1 items">
@@ -65,54 +53,99 @@
                     <h1>na mieru</h1>
                 </div>
             </div>
-            <!-- MOZNO MOZNO MOZNO -->
-            <section >
-                <a href="http://127.0.0.1:2451#first_art">
-                    <button>	
-                        &#8595;
-                    </button>
-                </a>
-
-            </section>
         </nav>
 
-        <div class="items">
+        <div class="ButtonsFunc">
+
+        </div>
+        <div class="ButtonsFunc Preco" id="ButtonsFunc">
+            <img src="" alt="">
+            <div class="columnsInLine">
+                <div class="ParagraphSec reveal">
+                    <h1 id="ChangeTitle">PRECO</h1>
+                    <p id="changeText ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cras vitae dolor ultricies, consectetur tellus ut, tincidunt
+                        metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                        Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur
+                    </p>
+                </div>
+
+                <section class="buttons">
+                    <button type="button" onclick="PrecoSekcia()">preco</button>
+                    <button type="button" onclick="CoSekcia()">co</button>
+                    <button type="button" onclick="NacoSekcia()">naco</button>
+                    <button type="button" onclick="ZacoSekcia()">zaco</button>
+                </section>
+            </div>
 
         </div>
 
-        <div class="items">
-            <p id="changeText">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                Voluptatibus quia quaerat deleniti pariatur distinctio Illum,
-                quam eum maiores, at exercitationem delectus officiis hic officia 
-                perferendis aliquid aperiam ad beatae temporibus
-            </p>
-            <section class="buttons">
-                <button type="button" onclick='document.getElementById("changeText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatibus quia quaerat deleniti pariatur distinctio Illum, quam eum maiores, at exercitationem delectus officiis hic officia perferendis aliquid aperiam ad beatae temporibus"'>preco</button>
-                <button type="button" onclick='document.getElementById("changeText").innerHTML = " Voluptatibus quia quaerat deleniti pariatur distinctio. Illum,"'>co</button>
-                <button type="button" onclick='document.getElementById("changeText").innerHTML = "quam eum maiores, at exercitationem delectus officiis hic officia "'>naco</button>
-                <button type="button" onclick='document.getElementById("changeText").innerHTML = "perferendis aliquid aperiam ad beatae temporibus."'>zaco</button>
-            </section>
+
+        <div class="first-section" id="first-section">
+            <div class="images-wrapper">
+                <div class="ScrollMagic">
+                    <div class="ScrollMagicText">
+                        <h1>About me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Suscipit voluptatum, porro ducimus excepturi quod corporis
+                            placeat dolorem, ullam repellat ipsa et, aperiam fugiat illo?
+                            Vero nam voluptate eaque laborum unde.
+                        </p>
+                    </div>
+                    <div class="ScrollMagicImages">
+                        <!--<img class="FirstImg" src="/static/a1916302_large.jpg" alt="">
+                        <img id="SecondImg" src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="">
+                        <img id="ThirdImg" src="/static/ragnar.jpg" alt="">
+                        <img id="FourthImg" src="/static/custom-tables-bellevue-wa.jpg" alt="">-->
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="article reveal">
-            <!-- <div class="bg-art-col reveal left"></div>-->
-            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="reveal left images">
-            <section class="text reveal right">
-                <h1>Title</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Cras vitae dolor ultricies, consectetur tellus ut, tincidunt
-                    metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                    Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur
+        <div class="second-section ">
+            <div class="SecondText">
+                <h1>Why am i doing what i do?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis sint explicabo dicta? Ab veniam deserunt ratione
+                    fugit mollitia, ex inventore ducimus? Vel enim itaque
+                    odio nesciunt velit doloremque, facere et?
                 </p>
-            </section>
+            </div>
+            <div class="Changing-text-pos">
+                <h1 id="Changing-text">something</h1>
+            </div>
+
         </div>
-    </div>
+
+        <div class="gallery">
+            <div class="p-tag">
+                <p class="tag-1">G</p>
+                <p class="tag-2">A</p>
+                <p class="tag-3">L</p>
+                <p class="tag-4">L</p>
+                <p class="tag-5">E</p>
+                <p class="tag-6">R</p>
+                <p class="tag-7">Y</p>
+            </div>
+            <div class="gallery-images">
+                <img src="/static/a1916302_large.jpg" alt="" class="first--pic">
+                <img src="/static/custom-tables-bellevue-wa.jpg" alt="" class="sec--pic">
+                <img src="/static/custom_tables_2048x.jpg" alt="" class="thrd--pic">
+                <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="fourth--pic">
+                <img src="/static/images.jpg" alt="" class="fifth--pic">
+                <img src="/static/a1916302_large.jpg" alt="" class="sixth--pic">
+            </div>
+        </div>
 
 
-
-    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).on('scroll', function () {
+            $('img').css("left", Math.max(500 - 0.35 * window.scrollY, 0)
+                + "px");
+        })
+    </script>
     <script>
         document.getElementById("container").addEventListener('scroll', reveal)
 
@@ -122,7 +155,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowheight = window.innerHeight;
                 var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 35;
+                var revealpoint = 0;
 
                 if (revealtop < windowheight - revealpoint) {
                     reveals[i].classList.add('active');
@@ -131,66 +164,67 @@
                 }
             }
         }
+        var example = ['Passion', 'Quality', 'Love', 'Dreams'];
 
-        var lastScrollTop = -1;
-        navbar = document.getElementById("navbar");
-        window.addEventListener("scroll", function () {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                navbar.style.top = "-80px";
-            } else {
-                navbar.style.top = "0";
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function () {
+                    document.getElementById("Changing-text").innerHTML = example[i];
+                    textSequence(++i);
+                }, 2000);
+
+            } else if (example.length == i) {
+                textSequence(0);
             }
-            lastScrollTop = scrollTop
-        })
 
-            loadingAnim = document.querySelector('.loading_anim');
-            setTimeout(function () {
-                loadingAnim.parentElement.removeChild(loadingAnim);
-            }, 0);
+        }
 
+        loadingAnim = document.querySelector('.loading_anim');
+        setTimeout(function () {
+            loadingAnim.parentElement.removeChild(loadingAnim);
+        }, 0);
+
+        function PrecoSekcia() {
+            document.getElementById("ButtonsFunc").classList.remove('Co', 'Naco', 'Zaco');
+            document.getElementById("ButtonsFunc").classList.add('Preco', 'animation');
+            document.getElementById("changeText").innerHTML = "PRECO Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum accusantium omnis numquam fugit"
+            document.getElementById("ChangeTextTitle").innerHTML = "PRECO"
+            document.getElementById("ChangeTitle").innerHTML = "PRECO"
+
+        }
+
+        function CoSekcia() {
+            document.getElementById("ButtonsFunc").classList.remove('Preco', 'Naco', 'Zaco');
+            document.getElementById("ButtonsFunc").classList.add('Co', 'animation');
+            document.getElementById("changeText").innerHTML = "CO    laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium "
+            document.getElementById("ChangeTextTitle").innerHTML = "CO"
+            document.getElementById("ChangeTitle").innerHTML = "CO"
+
+
+        }
+
+        function NacoSekcia() {
+            document.getElementById("ButtonsFunc").classList.remove('Co', 'Preco', 'Zaco');
+            document.getElementById("ButtonsFunc").classList.add('Naco', 'animation');
+            document.getElementById("changeText").innerHTML = "NACO laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium deserunt dolore perspiciatis doloribus!"
+            document.getElementById("ChangeTextTitle").innerHTML = "NACO"
+            document.getElementById("ChangeTitle").innerHTML = "NACO"
+
+
+        }
+
+        function ZacoSekcia() {
+            document.getElementById("ButtonsFunc").classList.remove('Co', 'Naco', 'Preco');
+            document.getElementById("ButtonsFunc").classList.add('Zaco', 'animation');
+            document.getElementById("changeText").innerHTML = "ZACO Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum accusantium omnis numquam fugit laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium deserunt dolore perspiciatis doloribus!"
+            document.getElementById("ChangeTextTitle").innerHTML = "ZACO"
+            document.getElementById("ChangeTitle").innerHTML = "ZACO"
+
+
+        }
     </script>
-    <!--<script>
-            const html = document.documentElement;
-            const canvas = document.querySelector('.cool-anim');
-            const context = canvas.getContext('2d');
-
-            const currentFrame = index => (
-                `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-            )
-
-            const preloadImages = () => {
-            for (let i = 1; i < frameCount; i++) {
-                const img = new Image();
-                img.src = currentFrame(i);
-                }
-            };
-
-            const frameCount = 147;
-
-            canvas.height = 770;
-            canvas.width = 1158;
-            const img = new Image();
-            img.src = currentFrame(1);
-            img.onload = function(){
-                context.drawImage(img , 0 , 0)
-            }
-
-            const updateImage = index => {
-                img.src = currentFrame(index)
-                context.drawImage(img , 0 , 0);
-            }
-
-            window.addEventListener('scroll' , () =>{
-                const scrollTop = html.scrollTop;
-                const maxScrollTop = html.scrollHeight - window.innerHeight;
-                const scrollFraction = scrollTop / maxScrollTop;
-                const frameIndex = Math.min(frameCount - 1 , Math.floor(scrollFraction * frameCount))
-                requestAnimationFrame( () => updateImage(frameIndex + 1))
-            })
-
-            preloadImages()
-        </script>-->
 </body>
 
 </html>

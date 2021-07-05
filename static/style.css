@@ -3,16 +3,17 @@ body{
     overflow-x: hidden;
     margin: 0;
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;   
+    display: flex; 
+    flex-direction: column;
 }
 .container{
-    width: 100vw;
-    height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
     /*margin-top: 10vh;*/
     animation: ForLoading 0s ease;
+    margin: 0;
 }
 @keyframes ForLoading{
     0%{
@@ -27,25 +28,19 @@ body{
     }
     100%{
         display: contents;
-    }
-}
+    }}
 h1{
     padding: 8px;
     text-align: center;
     font-family: monospace;
     letter-spacing: 0.5em;
-    /*opacity: 0%;*/
-    transition: all 3s ease;
 }
-
 p{
     font-family: sans-serif;
     letter-spacing: 0.3em;
     line-height: 170%;
     padding-right: 8px;
     padding-left: 15px;
-    /*opacity: 0%;*/
-    transition: all 3s ease;
 }
 /*::-webkit-scrollbar{
     display: none;
@@ -79,8 +74,14 @@ canvas {
     90%{
         opacity: 100%;
     }
+    99%{
+        width: 100vw;
+        height: 100vh;
+    }
     100%{
         display: none;
+        width: 0vw;
+        height: 0vh;
     }
 }
 
@@ -113,6 +114,7 @@ canvas {
     top: 50%;
     transform: translate(-50% , -50%);
     animation: zoom-out 6s linear infinite;
+    opacity: 20%;
 }
 .text-box{
     width: 40%;
@@ -243,194 +245,274 @@ canvas {
     }
     100%{
         visibility: visible;
+    }}
+/* END OF ANIMATION TOP BAR */
+/* END OF ANIMATION TOP BAR */
+/* END OF ANIMATION TOP BAR */
+
+/* START OF ITEMS */
+/* START OF ITEMS */
+/* START OF ITEMS */
+
+    .Preco{
+        background-image: url(/static/custom-tables-bellevue-wa.jpg);
     }
+    .Naco{
+        background-image: url(/static/custom_tables_2048x.jpg);
+    }
+    .Zaco{
+        background-image: url(/static/images.jpg);
+    }
+    .Co{
+        background-image: url(/static/images\ \(1\).jpg);
+    }
+    .Co.animation , .Zaco.animation , .Naco.animation , .Preco.animation{
+        animation: displaying ease 2.5s;
+    }
+    @keyframes displaying {
+        0%{
+            opacity: 100%;
+        }
+        15%{
+            opacity: 0%;
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
+    .ButtonsFunc{
+        display: flex;
+        align-items: center;
+        background-size: cover; 
+        scroll-snap-align: start;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100vw;
+    } 
+    .columnsInLine{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+     .ParagraphSec {        
+        max-width: 40vw;
+        background-color: white;
+        border-radius: 50px;
+        height: min-content;
+        opacity: 50%;
+        transform: translateY(50px);
+        transition: all 1s ease;
+    }
+    .ParagraphSec.active{    
+        opacity: 100%;
+        transform: translateY(0);
+    }
+    .ButtonsFunc .ParagraphSec .ChangeTitle{
+        color: black;
+    }
+    .ButtonsFunc p{
+        color: black;
+        padding: 30px 30px 30px 30px;
+    }
+    .ButtonsFunc .buttons  {
+        display: flex;
+        flex-flow: column;
+        max-width: 20vw;
+        width: 100%;
+        justify-content: end;
+    }
+    .ButtonsFunc .buttons button {
+        background-color: #e0f3f7d8;
+        border-radius: 15px;
+        height: 8vh;
+        margin: 15px 15px 15px 15px ;
+        border: 1px solid #4c6bb8;
+        font-family: sans-serif;
+        letter-spacing: 0.3em;
+        font-size: 1.4em;
+        font-weight: 500;
+
+    }
+/* END OF ITEMS */
+/* END OF ITEMS */
+/* END OF ITEMS */
+.first-section{
+    width: 100vw;
+    height: 100vh;  
+    scroll-snap-align: start;  
+    /*scroll-snap-stop: normal;*/
+    background-color: blanchedalmond;
+
 }
-.landing-animation section{
-    width: 100%;
-    height: 20vh;
-    background-color: rgba(0, 0, 0, 0.171);
-    position: absolute;
-    margin-top: 81vh;
+.first-section .images-wrapper{
+    width: 100vw;  
+    height: 100vh;
+    background-color: blanchedalmond;
 }
-.landing-animation section button{
-    width: 100%;
+.ScrollMagic {
+    position: sticky;
+    top: 200px; 
+    right: 10px;
+    width: 100vw;
+}
+.ScrollMagicText {
+    position: relative;
+    left: 30%;
+    max-width: 40vw;    
+    background-color: white;
+    border-radius: 30px;
+    height: min-content;
+    z-index: 1;
+}
+.ScrollMagicImages img{
+    position: sticky;
+}
+.FirstImg{
+    width: 25%;
+    height: auto;
+    left: 200px;
+    bottom: 100px;
+    z-index: 2;
+}
+#SecondImg{
+    width: 25%;
+    height: auto;
+    left: 450px;
+    bottom: 160px;
+    z-index: 3;
+}
+#ThirdImg{
+    width: 40%;
+    height: auto;
+    left: 20px;
+    z-index: 4;
+    top: 150px;
+}
+#FourthImg{
+    width: 50%;
+    height: auto;
+    left: 350px;
+    top: 150px;
+    z-index: 4;
+}
+/* SECOND SECTION */
+/* SECOND SECTION */
+/* SECOND SECTION */
+.second-section{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start; 
+    background-color: rgb(128, 108, 78);
+    position: relative;
+}
+.SecondText{
+    position: relative;
+    top: 35%;
+    display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    font-size: xx-large;
-    background-color: rgba(0, 0, 0, 0.171);
-
-}
-/* END OF ANIMATION TOP BAR */
-/* END OF ANIMATION TOP BAR */
-/* END OF ANIMATION TOP BAR */
-
-
-
-
-/* START OF THE NAVBAR  */
-/* START OF THE NAVBAR  */
-/* START OF THE NAVBAR  */
-nav#navbar{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    padding: 0 20px;
+    height: 40vh;
+    width: 100vw;
     background-color: white;
-    z-index: 1000;
-    box-sizing: border-box;
+}
+.SecondText p {
+    width: 50vw;
+}
+.Changing-text-pos{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.5s;
-}
-nav#navbar ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: row-reverse;
-    float: right;
-}
-nav#navbar ul a button{
-    list-style: none;
-    float: right;
-    background-color: rgb(185, 185, 185);
-    padding: 5px 0 5px 10px;
-    padding: 20px;
-    height: 100%;
-    border: none;    
-    font-family: monospace;
-    letter-spacing: 0.35em;
-    font-size: x-large;
-    text-decoration: none;
-    transition: all 1s ease;
-}
-nav#navbar ul a button:hover{
-    font-size: xx-large;
-}
-nav#navbar ul a{
-    height: 100%;
-    padding: 0 20px;
-}
-.brand{
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-
-
-/* END OF THE NAVBAR  */
-/* END OF THE NAVBAR  */
-/* END OF THE NAVBAR  */
-
-
-
-
-/* START OF ARTICLE RIGHT */
-/* START OF ARTICLE RIGHT */
-/* START OF ARTICLE RIGHT */
-
-@media all and (min-width: 1024px){
-    .article img{
-        height: 550px;
-        object-fit: cover;
-    }
-}
-.article , .items{
+    justify-content: flex-end;
+    right: 5%;
     width: 100vw;
-    height: 101vh;
-    /*margin-bottom: 20vh;
-    margin-top: 20vh;*/
-    scroll-snap-align: end;
-}
-.items{
-    display: flex;
-    align-items: center;
-}
-.items p{
-    left: 0;
-    color: white;
-    justify-content: left;
-}
-.items .buttons {
-    display: block;
-    float: right;
-}
-.items .buttons button {
-    width: 20vw;
-    height: 10vh;
-}
-
-.article:nth-of-type(2){
-    background-color: rgb(68, 68, 68);
-}
-.article:nth-of-type(1){
-    background-color: rgb(255, 126, 126);
-}
-/*----------------------*/
-.bg-art-col{
-    height: 90vh;
-    width: 100vw;
-    background-color: wheat;
-    position: absolute;
-    transition: all 3.5s ease;
-    opacity: 0%;
-}
-.bg-art-col.right{
-    transform: translateX(70vw);
-    clip-path: polygon(27% 0, 100% 0, 100% 80%, 61% 80%);
-}
-.bg-art-col.left{
-    transform: translateX(-70vw);
-    clip-path: polygon(0 0, 73% 0, 27% 100%, 0 100%);
-}
-.bg-art-col.active{
-    opacity: 100%;
-    transform: translateX(0vw);
-}
-/*----------------------------*/
-.images{
-    top: 5vh;
+    top: 50%;
+    height: max-content;
     position: relative;
-    width: 100%;
-    z-index: 10;
-    transition: all 2s ease;
-    opacity: 30%; 
 }
-.images.right{
-    transform: translateX(75%);
+#Changing-text{
+    min-width: 25vw;
+    height: 5vh;
+    border-radius: 30px;
+    background-color: blanchedalmond;
+    color: black;
+    font-size: 1900;
+    font-weight: bold;
+    position: relative;
+    width: max-content;
 }
-.images.left{
-    transform: translateX(-75%);
-}
-.images.active{
-    transform: translateX(0);
-    opacity: 100%;
-}
-/*------------------------------*/
-.text{
-    margin-top: 12vh;
-    width: 40vw;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: white;
-    opacity: 0%;    
-    border-radius: 0.5rem;
-    transition: all 5s ease;
-    transform: translateY(50px);
-}
-.text.left{
-    margin-left: 8vw;
-}
-.text.right{
-    float: right;
-    margin-right: 8vw;
-}
+/* END OF SECOND SEC */
+/* END OF SECOND SEC */
+/* END OF SECOND SEC */
 
-.article.active .text{
-    transform: translateY(0);
-    opacity: 100%;
+/* GALLERY */
+/* GALLERY */
+/* GALLERY */
+
+.gallery{
+    width: 100vw;
+    height: 450vh;
+    scroll-snap-align: start;
+    background-color: blanchedalmond;
 }
+.p-tag{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 400px;
+    z-index: 10;
+}
+.gallery p{
+    color: black;
+    font-size: 8rem;
+    font-weight: 600;
+    line-height: 20vh;    
+    margin: 30px 30px 30px 30px;
+}
+.gallery-images{
+    width: 100vw;
+    margin-top: 90vh;
+}
+.gallery-images img{
+    height: auto;
+    position: relative;
+}
+.first--pic{
+    z-index: 11;
+    width: 40vw;
+    left: 50px;
+}
+.sec--pic{
+    z-index: 1;
+    width: 40vw;
+    left: 200px;
+    top: 500px;
+}
+.thrd--pic{
+    z-index: 1;
+    width: 35vw;
+    left: 300px;
+    top: 800px;
+}
+.fourth--pic{
+    z-index: 11;
+    width: 40vw;
+    left: 200px;
+    top: 1200px;
+}
+.fifth--pic{
+    z-index: 1;
+    width: 30vw;
+    left: 150px;
+    top: 1300px;
+}
+.sixth--pic{
+    z-index: 11;
+    width: 40vw;
+    left: 250px;
+    top: 1550px;
+}
+/* END OF GALLERY */
+/* END OF GALLERY */
+/* END OF GALLERY */
