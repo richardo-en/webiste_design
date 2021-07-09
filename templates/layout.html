@@ -10,79 +10,48 @@
 
 <body>
     <!--<div class="loading_anim">
-        <img src="/static/a1916302_large.jpg" alt="">
+            <img src="/static/a1916302_large.jpg" alt="">
     </div>-->
 
     <div class="container" id="container">
         <nav class="landing-animation">
 
-            <div class="banner1 items">
-                <img src="/static/ragnar.jpg" class="obrazek items" alt="">
+            <div class="banner1">
+                <img id="obrazek" name="slide">
                 <div class="text-box">
-                    <h1>Stoly </h1>
+                    <h1 id="textOne"> </h1>
                     <span></span>
-                    <h1>na mieru</h1>
-                </div>
-            </div>
-
-
-
-            <div class="banner2">
-                <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" class="obrazek" alt="">
-                <div class="text-box">
-                    <h1>Pre </h1>
-                    <span></span>
-                    <h1>Kazdeho</h1>
-                </div>
-            </div>
-
-            <div class="banner3">
-                <img src="/static/a1916302_large.jpg" class="obrazek" alt="">
-                <div class="text-box">
-                    <h1>Len od </h1>
-                    <span></span>
-                    <h1>1000000$ vyssie</h1>
-                </div>
-            </div>
-
-            <div class="banner4">
-                <img src="/static/ragnar.jpg" class="obrazek" alt="">
-                <div class="text-box">
-                    <h1>Nerobim zadarmenko</h1>
-                    <span></span>
-                    <h1>na mieru</h1>
+                    <h1 id="textTwo"></h1>
                 </div>
             </div>
         </nav>
-
-        <div class="ButtonsFunc">
-
+        <div class="table-3d">
+            <h1>tu bude 3d stol</h1>
         </div>
-        <div class="ButtonsFunc Preco" id="ButtonsFunc">
-            <img src="" alt="">
+
+        <div class="ButtonsFunc" >
+            <img name='thrdpartimg' alt="" src="/static/custom-tables-bellevue-wa.jpg" style="background-size: cover;" id="ButtonsFunc" class="neco">
             <div class="columnsInLine">
-                <div class="ParagraphSec reveal">
-                    <h1 id="ChangeTitle">PRECO</h1>
-                    <p id="changeText ">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Cras vitae dolor ultricies, consectetur tellus ut, tincidunt
-                        metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                        Maecenas vulputate velit et venenatis vehicula. Phasellus consectetur
+                <div class="ParagraphSec reveal " id="ButtonsFuncParag">
+                    <h1 id="ChangeTitle">Preco</h1>
+                    <p id="changeText">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Laudantium non libero, eum nam autem accusamus quasi esse
+                         in quibusdam numquam eveniet laboriosam odio aperiam 
                     </p>
                 </div>
 
                 <section class="buttons">
-                    <button type="button" onclick="PrecoSekcia()">preco</button>
-                    <button type="button" onclick="CoSekcia()">co</button>
-                    <button type="button" onclick="NacoSekcia()">naco</button>
-                    <button type="button" onclick="ZacoSekcia()">zaco</button>
+                    <button type="button" id="FirstButton">preco</button>
+                    <button type="button" id="SecondButton">co</button>
+                    <button type="button" id="ThirdButton">naco</button>
+                    <button type=" button" id="FourthButton">ako</button>
                 </section>
             </div>
-
         </div>
 
 
-        <div class="first-section" id="first-section">
+        <div class="first-section">
             <div class="images-wrapper">
                 <div class="ScrollMagic">
                     <div class="ScrollMagicText">
@@ -93,17 +62,18 @@
                             Vero nam voluptate eaque laborum unde.
                         </p>
                     </div>
-                    <div class="ScrollMagicImages">
-                        <!--<img class="FirstImg" src="/static/a1916302_large.jpg" alt="">
-                        <img id="SecondImg" src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="">
-                        <img id="ThirdImg" src="/static/ragnar.jpg" alt="">
-                        <img id="FourthImg" src="/static/custom-tables-bellevue-wa.jpg" alt="">-->
+                    <div class="ScrollMagicImages ">
+                        <img class="FirstImg reveal" src="/static/a1916302_large.jpg" alt="">
+                        <img class="SecondImg reveal" src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="">
+                        <img class="ThirdImg reveal" src="/static/ragnar.jpg" alt="">
+                        <img class="FourthImg reveal" src="/static/custom-tables-bellevue-wa.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="second-section ">
+            <img src="/static/a1916302_large.jpg" alt="">
             <div class="SecondText">
                 <h1>Why am i doing what i do?</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -119,34 +89,44 @@
         </div>
 
         <div class="gallery">
-            <div class="p-tag">
-                <p class="tag-1">G</p>
-                <p class="tag-2">A</p>
-                <p class="tag-3">L</p>
-                <p class="tag-4">L</p>
-                <p class="tag-5">E</p>
-                <p class="tag-6">R</p>
-                <p class="tag-7">Y</p>
-            </div>
-            <div class="gallery-images">
-                <img src="/static/a1916302_large.jpg" alt="" class="first--pic">
-                <img src="/static/custom-tables-bellevue-wa.jpg" alt="" class="sec--pic">
-                <img src="/static/custom_tables_2048x.jpg" alt="" class="thrd--pic">
-                <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="fourth--pic">
-                <img src="/static/images.jpg" alt="" class="fifth--pic">
-                <img src="/static/a1916302_large.jpg" alt="" class="sixth--pic">
-            </div>
+            <p class="galleryTitle" role='textbox' aria-multiline='true'>
+                GALLERY
+            </p>
+            <img src="/static/a1916302_large.jpg" alt="" class="first--pic">
+            <img src="/static/custom-tables-bellevue-wa.jpg" alt="" class="sec--pic">
+            <img src="/static/custom_tables_2048x.jpg" alt="" class="thrd--pic">
+            <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="fourth--pic">
+            <img src="/static/images.jpg" alt="" class="fifth--pic">
+            <img src="/static/a1916302_large.jpg" alt="" class="sixth--pic">
         </div>
 
+    </div>
+    <script>
+        var i = 0;
+        var images = ['/static/a1916302_large.jpg', '/static/custom-tables-bellevue-wa.jpg', '/static/mercedes-amg-c63-s-2018_14-clanokW.jpg', '/static/custom_tables_2048x.jpg'];
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-        $(document).on('scroll', function () {
-            $('img').css("left", Math.max(500 - 0.35 * window.scrollY, 0)
-                + "px");
-        })
-    </script>
-    <script>
+        var FirstLine = ['text 1', 'text 3', 'text 5', 'text 7'];
+        var SecondLine = ['text 2', 'text 4', 'text 6', 'text 8'];
+
+        var time = 6000;
+
+        function changeImage() {
+            document.slide.src = images[i];
+            document.getElementById('textOne').innerHTML = FirstLine[i]
+            document.getElementById('textTwo').innerHTML = SecondLine[i]
+
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("changeImage()", time);
+        }
+        window.onload = changeImage;
+
+
+
         document.getElementById("container").addEventListener('scroll', reveal)
 
         function reveal() {
@@ -164,6 +144,9 @@
                 }
             }
         }
+
+
+
         var example = ['Passion', 'Quality', 'Love', 'Dreams'];
 
         textSequence(0);
@@ -181,47 +164,77 @@
 
         }
 
-        loadingAnim = document.querySelector('.loading_anim');
+        /*loadingAnim = document.querySelector('.loading_anim');
         setTimeout(function () {
             loadingAnim.parentElement.removeChild(loadingAnim);
-        }, 0);
+        }, 0);*/
+        let firstbutt = document.getElementById("FirstButton");
+        let secbutt = document.getElementById("SecondButton");
+        let thrdbutt = document.getElementById("ThirdButton");
+        let fourthbutt = document.getElementById("FourthButton");
 
-        function PrecoSekcia() {
-            document.getElementById("ButtonsFunc").classList.remove('Co', 'Naco', 'Zaco');
-            document.getElementById("ButtonsFunc").classList.add('Preco', 'animation');
-            document.getElementById("changeText").innerHTML = "PRECO Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum accusantium omnis numquam fugit"
-            document.getElementById("ChangeTextTitle").innerHTML = "PRECO"
-            document.getElementById("ChangeTitle").innerHTML = "PRECO"
+        var textToChange = document.getElementById("changeText");
+        var titleToChange = document.getElementById("ChangeTitle");
+        var ButtonsFunc = document.getElementById("ButtonsFunc");
+        var ButtonsFuncParag = document.getElementById("ButtonsFuncParag");
 
+        
+        var ThirdSecImages = ['/static/custom-tables-bellevue-wa.jpg' , '/static/custom_tables_2048x.jpg' , '/static/images.jpg' , '/static/custom_tables_2048x.jpg']
+        firstbutt.onclick = () =>{
+            setTimeout(function(){
+                textToChange.innerHTML = 'PRECO Lorem ipsum <em>dolor sit amet consectetur,</em> adipisicing elit. Harum accusantium omnis numquam fugit';
+                titleToChange.innerHTML = 'PRECO ';
+                document.thrdpartimg.src = ThirdSecImages[0]
+            }, 1000);
+            ButtonsFunc.classList.add('animation');
+            ButtonsFuncParag.classList.add('animation');
+            setTimeout(function(){
+                ButtonsFunc.classList.remove('animation');
+                ButtonsFuncParag.classList.remove('animation');
+            } , 2000)
+        }
+    
+        secbutt.onclick = () =>{
+            setTimeout(function(){
+                textToChange.innerHTML = 'CO laborum sunt assumenda <strong>quisquam! Ad, accusamus ex nobis,</strong> enim beatae aspernatur nisi laudantium';
+                titleToChange.innerHTML = 'CO ';
+                document.thrdpartimg.src = ThirdSecImages[1]
+            }, 1000);
+            ButtonsFunc.classList.add('animation');
+            ButtonsFuncParag.classList.add('animation');
+            setTimeout(function(){
+                ButtonsFunc.classList.remove('animation');
+                ButtonsFuncParag.classList.remove('animation');
+            } , 2000)
         }
 
-        function CoSekcia() {
-            document.getElementById("ButtonsFunc").classList.remove('Preco', 'Naco', 'Zaco');
-            document.getElementById("ButtonsFunc").classList.add('Co', 'animation');
-            document.getElementById("changeText").innerHTML = "CO    laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium "
-            document.getElementById("ChangeTextTitle").innerHTML = "CO"
-            document.getElementById("ChangeTitle").innerHTML = "CO"
-
-
+        thrdbutt.onclick = () =>{
+            setTimeout(function(){
+                textToChange.innerHTML = 'NACO  accusamus ex nobis, enim beatae aspernatur nisi laudantium';
+                titleToChange.innerHTML = 'NACO ';
+                document.thrdpartimg.src = ThirdSecImages[2]
+            }, 1000);
+         
+            ButtonsFunc.classList.add('animation');  
+            ButtonsFuncParag.classList.add('animation'); 
+            setTimeout(function(){
+                ButtonsFunc.classList.remove('animation');
+                ButtonsFuncParag.classList.remove('animation');
+            } , 2000)
         }
 
-        function NacoSekcia() {
-            document.getElementById("ButtonsFunc").classList.remove('Co', 'Preco', 'Zaco');
-            document.getElementById("ButtonsFunc").classList.add('Naco', 'animation');
-            document.getElementById("changeText").innerHTML = "NACO laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium deserunt dolore perspiciatis doloribus!"
-            document.getElementById("ChangeTextTitle").innerHTML = "NACO"
-            document.getElementById("ChangeTitle").innerHTML = "NACO"
-
-
-        }
-
-        function ZacoSekcia() {
-            document.getElementById("ButtonsFunc").classList.remove('Co', 'Naco', 'Preco');
-            document.getElementById("ButtonsFunc").classList.add('Zaco', 'animation');
-            document.getElementById("changeText").innerHTML = "ZACO Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum accusantium omnis numquam fugit laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium deserunt dolore perspiciatis doloribus!"
-            document.getElementById("ChangeTextTitle").innerHTML = "ZACO"
-            document.getElementById("ChangeTitle").innerHTML = "ZACO"
-
+        fourthbutt.onclick = () =>{
+            setTimeout(function(){
+                textToChange.innerHTML = 'PRECO PRECOPRECOPRECO laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium';
+                titleToChange.innerHTML = 'PRECO ';
+                document.thrdpartimg.src = ThirdSecImages[3]
+            }, 1000);
+            ButtonsFunc.classList.add('animation');
+            ButtonsFuncParag.classList.add('animation');
+            setTimeout(function(){
+                ButtonsFunc.classList.remove('animation');
+                ButtonsFuncParag.classList.remove('animation');
+            } , 2000)
 
         }
     </script>

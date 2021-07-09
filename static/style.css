@@ -1,5 +1,5 @@
 body{
-    background-color: black; 
+    background-color: rgb(53, 46, 35); 
     overflow-x: hidden;
     margin: 0;
     width: 100vw;
@@ -85,10 +85,30 @@ canvas {
     }
 }
 
+
+
+
+
+
+.table-3d{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    scroll-snap-align: start;
+}
+.table-3d h1{
+    line-height: 200px;
+    font-size: xxx-large;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+}
 /* top bar animation video  */
 /* top bar animation video  */
 /* top bar animation video  */
 .landing-animation{
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -96,10 +116,7 @@ canvas {
     position: relative;
     scroll-snap-align: end;
 }
-.landing-animation .banner1 , 
-.landing-animation .banner2 , 
-.landing-animation .banner3 , 
-.landing-animation .banner4{
+.landing-animation .banner1{
     position: absolute;
     overflow: hidden;
     width: 100%;
@@ -107,7 +124,7 @@ canvas {
     left: 0;
     top: 0;   
 }
-.obrazek{
+#obrazek{
     position: absolute;
     width: 120%;
     left: 50%;
@@ -162,90 +179,7 @@ canvas {
         width:100%
     }
 }
-.banner1{
-    animation: slide1 24s linear infinite ;
-}
-.banner2{
-    animation: slide2 24s linear infinite ;
-}
-.banner3{
-    animation: slide3 24s linear infinite ;
-}
-.banner4{
-    animation: slide4 24s linear infinite ;
-}
-  
 
-@keyframes slide1{
-    0%{
-        visibility: visible;
-    }
-    25%{
-        visibility: hidden;
-    }
-    50%{
-        visibility: hidden;
-    }
-    75%{
-        visibility: hidden;
-    }
-    100%{
-        visibility: visible;
-    }
-}
-
-@keyframes slide2{
-    0%{
-        visibility: hidden;
-    }
-    25%{
-        visibility: hidden;
-    }
-    50%{
-        visibility: visible;
-    }
-    75%{
-        visibility: hidden;
-    }
-    100%{
-        visibility: hidden;
-    }
-}
-
-@keyframes slide3{
-    0%{
-        visibility: hidden;
-    }
-    25%{
-        visibility: hidden;
-    }
-    50%{
-        visibility: hidden;
-    }
-    75%{
-        visibility: visible;
-    }
-    100%{
-        visibility: hidden;
-    }
-}
-
-@keyframes slide4{
-    0%{
-        visibility: hidden;
-    }
-    25%{
-        visibility: hidden;
-    }
-    50%{
-        visibility: hidden;
-    }
-    75%{
-        visibility: hidden;
-    }
-    100%{
-        visibility: visible;
-    }}
 /* END OF ANIMATION TOP BAR */
 /* END OF ANIMATION TOP BAR */
 /* END OF ANIMATION TOP BAR */
@@ -254,52 +188,44 @@ canvas {
 /* START OF ITEMS */
 /* START OF ITEMS */
 
-    .Preco{
-        background-image: url(/static/custom-tables-bellevue-wa.jpg);
+    .ButtonsFunc{
+        scroll-snap-align: start;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    } 
+    .ButtonsFunc img{
+        width: 100vw;
+        height: auto;        
     }
-    .Naco{
-        background-image: url(/static/custom_tables_2048x.jpg);
+    .neco{
+        opacity: 100%;
     }
-    .Zaco{
-        background-image: url(/static/images.jpg);
+    .neco.animation , .ParagraphSec.animation{
+        animation: fade-in-out 2s ease;
     }
-    .Co{
-        background-image: url(/static/images\ \(1\).jpg);
-    }
-    .Co.animation , .Zaco.animation , .Naco.animation , .Preco.animation{
-        animation: displaying ease 2.5s;
-    }
-    @keyframes displaying {
-        0%{
-            opacity: 100%;
-        }
-        15%{
-            opacity: 0%;
+    @keyframes fade-in-out{
+        50%{
+            opacity:3%;
         }
         100%{
             opacity: 100%;
         }
     }
-    .ButtonsFunc{
-        display: flex;
-        align-items: center;
-        background-size: cover; 
-        scroll-snap-align: start;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        height: 100vh;
-        width: 100vw;
-    } 
+    
     .columnsInLine{
         display: flex;
         justify-content: space-around;
+        position: sticky;        
         align-items: center;
+        margin: 50px;
         width: 100vw;
         height: 100vh;
+        bottom: 40vh;
     }
-     .ParagraphSec {        
-        max-width: 40vw;
+     .ParagraphSec {            
         background-color: white;
+        max-width: 40vw;
         border-radius: 50px;
         height: min-content;
         opacity: 50%;
@@ -343,9 +269,9 @@ canvas {
     width: 100vw;
     height: 100vh;  
     scroll-snap-align: start;  
-    /*scroll-snap-stop: normal;*/
     background-color: blanchedalmond;
-
+    margin-top: -17px;
+    z-index: 5;
 }
 .first-section .images-wrapper{
     width: 100vw;  
@@ -353,13 +279,12 @@ canvas {
     background-color: blanchedalmond;
 }
 .ScrollMagic {
-    position: sticky;
-    top: 200px; 
     right: 10px;
     width: 100vw;
 }
 .ScrollMagicText {
-    position: relative;
+    position: sticky;
+    top: 30%; 
     left: 30%;
     max-width: 40vw;    
     background-color: white;
@@ -368,35 +293,47 @@ canvas {
     z-index: 1;
 }
 .ScrollMagicImages img{
-    position: sticky;
+    position: relative;
+    transition: all 3s ease;
 }
 .FirstImg{
     width: 25%;
     height: auto;
-    left: 200px;
+    left: 400px;
     bottom: 100px;
-    z-index: 2;
 }
-#SecondImg{
+.SecondImg{
     width: 25%;
     height: auto;
-    left: 450px;
-    bottom: 160px;
-    z-index: 3;
+    left: 550px;
+    bottom: 100px;
 }
-#ThirdImg{
-    width: 40%;
+.ThirdImg{
+    width: 30%;
     height: auto;
     left: 20px;
-    z-index: 4;
-    top: 150px;
+    top: 100px;
 }
-#FourthImg{
-    width: 50%;
+.FourthImg{
+    width: 30%;
     height: auto;
     left: 350px;
-    top: 150px;
-    z-index: 4;
+    bottom: 150px;
+}
+.FirstImg.active {
+    left: 50px;
+    bottom: 185px;
+}
+.SecondImg.active{
+    left: 900px;
+    bottom: 160px;
+}
+.ThirdImg.active{
+    left: 200px;
+    top: 350px;
+}.FourthImg.active{
+    left: 100px;
+    bottom: 75px;
 }
 /* SECOND SECTION */
 /* SECOND SECTION */
@@ -407,10 +344,17 @@ canvas {
     scroll-snap-align: start; 
     background-color: rgb(128, 108, 78);
     position: relative;
+    z-index: 10;
+}
+.second-section img{
+    clip-path: polygon(0 0, 86% 0, 28% 100%, 0% 100%);
+    object-fit: cover;
+    overflow: hiiden;
+    height: 100vh;
 }
 .SecondText{
     position: relative;
-    top: 35%;
+    top: -80%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -425,22 +369,27 @@ canvas {
 .Changing-text-pos{
     display: flex;
     justify-content: flex-end;
-    right: 5%;
+    right: -2%;
     width: 100vw;
-    top: 50%;
+    top: -59%;
     height: max-content;
     position: relative;
 }
 #Changing-text{
+    text-align: start;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 20px;
     min-width: 25vw;
-    height: 5vh;
-    border-radius: 30px;
-    background-color: blanchedalmond;
-    color: black;
-    font-size: 1900;
+    height: 10vh;
+    border-radius: 5px;
+    background-color: rgb(47 47 47);
+    color: white;
+    line-height: 100px;
     font-weight: bold;
     position: relative;
     width: max-content;
+    font-size: xxx-large;
 }
 /* END OF SECOND SEC */
 /* END OF SECOND SEC */
@@ -452,66 +401,60 @@ canvas {
 
 .gallery{
     width: 100vw;
-    height: 450vh;
+    height: 520vh;
     scroll-snap-align: start;
     background-color: blanchedalmond;
+    z-index: 20;
 }
-.p-tag{
+.gallery p{
     display: flex;
     justify-content: center;
     position: sticky;
-    top: 400px;
-    z-index: 10;
-}
-.gallery p{
-    color: black;
-    font-size: 8rem;
-    font-weight: 600;
-    line-height: 20vh;    
-    margin: 30px 30px 30px 30px;
-}
-.gallery-images{
-    width: 100vw;
-    margin-top: 90vh;
+    top: 100px;
+    color: white;
+    letter-spacing: 8rem;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 20vh;
+    margin-top: 0;  
+    max-width: 100vw; 
+    mix-blend-mode: difference;
 }
 .gallery-images img{
     height: auto;
-    position: relative;
+    position: absolute;
+    z-index: 20;
+    
 }
 .first--pic{
-    z-index: 11;
-    width: 40vw;
-    left: 50px;
+    z-index: 4;
+    width: 40%;
+    margin: 40% 70% 20% 5%;
 }
 .sec--pic{
     z-index: 1;
-    width: 40vw;
-    left: 200px;
-    top: 500px;
+    width: 40%;
+    margin: 1% 20% 1% 50%;
 }
 .thrd--pic{
     z-index: 1;
-    width: 35vw;
-    left: 300px;
-    top: 800px;
+    width: 35%;
+    margin: 1%  60% 1% 10%;
 }
 .fourth--pic{
     z-index: 11;
-    width: 40vw;
-    left: 200px;
-    top: 1200px;
+    width: 40%;
+    margin: 1% 15% 1% 55%; 
 }
 .fifth--pic{
     z-index: 1;
-    width: 30vw;
-    left: 150px;
-    top: 1300px;
+    width: 30%;
+    margin: 1% 60% 1% 20%;
 }
 .sixth--pic{
     z-index: 11;
-    width: 40vw;
-    left: 250px;
-    top: 1550px;
+    width: 40%;
+    margin: 1% 25% 1% 40%;
 }
 /* END OF GALLERY */
 /* END OF GALLERY */
