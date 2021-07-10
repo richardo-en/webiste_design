@@ -15,8 +15,19 @@ body{
     animation: ForLoading 0s ease;
     margin: 0;
 }
+article{
+    background-color: white;
+    max-width: 40vw;
+    border-radius: 50px;
+    height: min-content;
+}
 article h1{
     font-size: 1.4rem;
+}
+article p {
+    color: black;
+    padding: 5px 20px;
+    text-align: center;
 }
 section{
     margin: 0;
@@ -44,12 +55,12 @@ h1{
     padding: 8px;
     text-align: center;
     font-family: monospace;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.4em;
 }
 p{
     font-family: sans-serif;
     letter-spacing: 0.3em;
-    line-height: 170%;
+    line-height: 30px;
     padding-right: 8px;
     padding-left: 15px;
 }
@@ -117,20 +128,22 @@ canvas {
     opacity: 20%;
 }
 .text-box{
-    width: 40%;
-    margin: 20% 0 10% 5%;
+    width: 100vw;
+    height: 40vh;
+    margin: 10% 0%;
     position: relative;
-    
 }
 .text-box span
 {
-    width: 0%;
+    width: 0px;
+    margin: 20px 0px;
     height: 2px;
     background-color: red;
-    position: absolute;
+    float: left;
     animation: span-mover 6s ease infinite;
 }
 .text-box h1{
+    display: flex;
     font-weight: bold;
     font-family: sans-serif;
     font-size: xx-large;
@@ -142,7 +155,7 @@ canvas {
 }
 
 @keyframes text-mover{
-    20%{
+    40%{
         opacity: 100%;
         transform: translateX(0);
     }
@@ -153,7 +166,7 @@ canvas {
 }
 @keyframes span-mover{
     100%{
-        width: 50%;
+        width: 400px;
     }
 }
 
@@ -174,9 +187,6 @@ canvas {
 }
 
 /*Buttons Function sect*/
-.ButtonsFunc{
-    overflow: hidden;
-} 
 .neco{
     opacity: 100%;
     width: 100vw;
@@ -196,96 +206,76 @@ canvas {
 }
 
 .columnsInLine{
-        display: flex;
-        justify-content: space-around;
-        position: sticky;        
-        align-items: center;
-        margin: 50px;
-        width: 100vw;
-        height: 100vh;
-        bottom: 40vh;
-    }
-     .ParagraphSec {            
-        background-color: white;
-        max-width: 40vw;
-        border-radius: 50px;
-        height: min-content;
-        opacity: 50%;
-        transform: translateY(50px);
-        transition: all 1s ease;
-    }
-    .ParagraphSec.active{    
-        opacity: 100%;
-        transform: translateY(0);
-    }
-    .ButtonsFunc .ParagraphSec .ChangeTitle{
-        color: black;
-    }
-    .ButtonsFunc p {
-        color: black;
-        padding: 5px 20px;
-        text-align: center;
-    }
-    .ButtonsFunc .buttons-wraper  {
-        display: flex;
-        flex-flow: column;
-        max-width: 20vw;
-        width: 100%;
-        justify-content: end;
-    }
-    .ButtonsFunc .buttons-wraper button {
-        background-color: #e0f3f7d8;
-        border-radius: 15px;
-        height: 8vh;
-        margin: 15px 15px 15px 15px ;
-        border: 1px solid #4c6bb8;
-        font-family: sans-serif;
-        letter-spacing: 0.3em;
-        font-size: 1.4em;
-        font-weight: 500;
-
-    }
+    display: flex;
+    justify-content: space-around;
+    position: absolute;        
+    align-items: center;
+    margin: 50px;
+    width: 100vw;
+    height: 100vh;
+    bottom: 1vh;
+}
+.ParagraphSec {            
+    opacity: 50%;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+.ParagraphSec.active{    
+    opacity: 100%;
+    transform: translateY(0);
+}
+.ButtonsFunc .ParagraphSec .ChangeTitle{
+    color: black;
+}
+.ButtonsFunc .buttons-wraper  {
+    display: flex;
+    flex-flow: column;
+    max-width: 50vw;
+    justify-content: end;
+}
+.ButtonsFunc .buttons-wraper button {
+    background-color: #e0f3f7d8;
+    border-radius: 15px;
+    padding: 20px 90px;
+    margin: 15px;
+    border: 1px solid #4c6bb8;
+    font-family: sans-serif;
+    letter-spacing: 0.3em;
+    font-size: 1.4em;
+}
 
 /*First Sections*/
 .first-section{
     background-color: blanchedalmond;
-    z-index: 5;
 }
 .first-section-article {
     position: sticky;
     top: 30%; 
     left: 30%;
-    max-width: 40vw;    
-    background-color: white;
-    border-radius: 30px;
-    height: min-content;
-    z-index: 1;
 }
-.ScrollMagicImages img{
-    position: relative;
+.first-section img{
+    position: relative;    
+    height: auto;
     transition: all 3s ease;
 }
-.FirstImg{
+.FirstImg , .SecondImg{
     width: 25%;
-    height: auto;
-    left: 400px;
     bottom: 100px;
+}
+.FirstImg{
+    left: 400px;
 }
 .SecondImg{
-    width: 25%;
-    height: auto;
     left: 550px;
-    bottom: 100px;
+}
+.ThirdImg , .FourthImg{
+    width: 30%;
 }
 .ThirdImg{
-    width: 30%;
-    height: auto;
     left: 20px;
     top: 100px;
 }
 .FourthImg{
-    width: 30%;
-    height: auto;
     left: 350px;
     bottom: 150px;
 }
@@ -304,18 +294,15 @@ canvas {
     top: 350px;
 }.FourthImg.active{
     left: 100px;
-    bottom: 75px;
+    bottom: -20px;
 }
 
 /*Second Sections*/
 .second-section{
     background-color: rgb(128, 108, 78);
-    z-index: 10;
 }
 .second-section img{
     clip-path: polygon(0 0, 86% 0, 28% 100%, 0% 100%);
-    object-fit: cover;
-    overflow: hiiden;
     height: 100vh;
 }
 .second-section-text{
@@ -326,7 +313,6 @@ canvas {
     justify-content: center;
     align-items: center;
     height: 40vh;
-    width: 100vw;
     background-color: white;
 }
 .second-section-text p {
@@ -336,9 +322,7 @@ canvas {
     display: flex;
     justify-content: flex-end;
     right: -2%;
-    width: 100vw;
-    top: -59%;
-    height: max-content;
+    bottom: 60%;
     position: relative;
 }
 #Changing-text{
@@ -365,6 +349,8 @@ canvas {
     z-index: 20;
 }
 .gallery p{
+    padding: 100px 50px;
+    margin: 0;
     display: flex;
     justify-content: center;
     position: sticky;
@@ -372,38 +358,23 @@ canvas {
     color: white;
     letter-spacing: 8rem;
     font-size: 10rem;
-    font-weight: 700;
-    line-height: 20vh;
-    margin-top: 0;  
     max-width: 100vw; 
     mix-blend-mode: difference;
 }
 .gallery-images img{
     height: auto;
     position: absolute;
-    z-index: 20;
 }
-.first--pic{
+.first--pic , .sec--pic , .fourth--pic , .sixth--pic{
     width: 40%;
-    margin: 40% 70% 20% 5%;
 }
-.sec--pic{
-    width: 40%;
+.sec--pic , .fourth--pic , .sixth--pic{
     margin: 1% 20% 1% 50%;
 }
-.thrd--pic{
-    width: 35%;
-    margin: 1%  60% 1% 10%;
+.thrd--pic , .fifth--pic {
+    margin: 1%  60% 1% 10%;   
+    width: 35%; 
 }
-.fourth--pic{
-    width: 40%;
-    margin: 1% 15% 1% 55%; 
-}
-.fifth--pic{
-    width: 30%;
-    margin: 1% 60% 1% 20%;
-}
-.sixth--pic{
-    width: 40%;
-    margin: 1% 25% 1% 40%;
+.first--pic{
+    margin: 40% 70% 20% 5%;
 }
