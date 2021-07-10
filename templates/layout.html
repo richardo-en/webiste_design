@@ -13,68 +13,65 @@
             <img src="/static/a1916302_large.jpg" alt="">
     </div>-->
 
-    <div class="container" id="container">
-        <nav class="landing-animation">
+    <main class="container" id="container">
 
-            <div class="banner1">
-                <img id="obrazek" name="slide">
+        <section class="landing-animation">
+            <div class="wrapper">
+                <img class="image" name="slide">
                 <div class="text-box">
                     <h1 id="textOne"> </h1>
                     <span></span>
                     <h1 id="textTwo"></h1>
                 </div>
             </div>
-        </nav>
-        <div class="table-3d">
-            <h1>tu bude 3d stol</h1>
-        </div>
+        </section>
 
-        <div class="ButtonsFunc" >
-            <img name='thrdpartimg' alt="" src="/static/custom-tables-bellevue-wa.jpg" style="background-size: cover;" id="ButtonsFunc" class="neco">
+        <section class="table-3d">
+            <h1>tu bude 3d stol</h1>
+        </section>
+
+        <section class="ButtonsFunc">
+            <img name='ButtonsFuncImg' alt="" src="/static/custom-tables-bellevue-wa.jpg" id="ButtonsFunc" class="neco">
             <div class="columnsInLine">
-                <div class="ParagraphSec reveal " id="ButtonsFuncParag">
+                <article class="ParagraphSec reveal " id="ButtonsFuncParag">
                     <h1 id="ChangeTitle">Preco</h1>
                     <p id="changeText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Laudantium non libero, eum nam autem accusamus quasi esse
-                         in quibusdam numquam eveniet laboriosam odio aperiam 
+                        in quibusdam numquam eveniet laboriosam odio aperiam
                     </p>
-                </div>
+                </article>
 
-                <section class="buttons">
+                <div class="buttons-wraper">
                     <button type="button" id="FirstButton">preco</button>
                     <button type="button" id="SecondButton">co</button>
                     <button type="button" id="ThirdButton">naco</button>
                     <button type=" button" id="FourthButton">ako</button>
-                </section>
-            </div>
-        </div>
-
-
-        <div class="first-section">
-            <div class="images-wrapper">
-                <div class="ScrollMagic">
-                    <div class="ScrollMagicText">
-                        <h1>About me</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Suscipit voluptatum, porro ducimus excepturi quod corporis
-                            placeat dolorem, ullam repellat ipsa et, aperiam fugiat illo?
-                            Vero nam voluptate eaque laborum unde.
-                        </p>
-                    </div>
-                    <div class="ScrollMagicImages ">
-                        <img class="FirstImg reveal" src="/static/a1916302_large.jpg" alt="">
-                        <img class="SecondImg reveal" src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="">
-                        <img class="ThirdImg reveal" src="/static/ragnar.jpg" alt="">
-                        <img class="FourthImg reveal" src="/static/custom-tables-bellevue-wa.jpg" alt="">
-                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="second-section ">
+
+        <section class="first-section">
+            <article class="first-section-article">
+                <h1>About me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Suscipit voluptatum, porro ducimus excepturi quod corporis
+                    placeat dolorem, ullam repellat ipsa et, aperiam fugiat illo?
+                    Vero nam voluptate eaque laborum unde.
+                </p>
+            </article>
+            <div class="ScrollMagicImages ">
+                <img class="FirstImg reveal" src="/static/a1916302_large.jpg" alt="">
+                <img class="SecondImg reveal" src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="">
+                <img class="ThirdImg reveal" src="/static/ragnar.jpg" alt="">
+                <img class="FourthImg reveal" src="/static/custom-tables-bellevue-wa.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="second-section">
             <img src="/static/a1916302_large.jpg" alt="">
-            <div class="SecondText">
+            <div class="second-section-text">
                 <h1>Why am i doing what i do?</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Facilis sint explicabo dicta? Ab veniam deserunt ratione
@@ -86,9 +83,9 @@
                 <h1 id="Changing-text">something</h1>
             </div>
 
-        </div>
+        </section>
 
-        <div class="gallery">
+        <section class="gallery">
             <p class="galleryTitle" role='textbox' aria-multiline='true'>
                 GALLERY
             </p>
@@ -98,9 +95,13 @@
             <img src="/static/mercedes-amg-c63-s-2018_14-clanokW.jpg" alt="" class="fourth--pic">
             <img src="/static/images.jpg" alt="" class="fifth--pic">
             <img src="/static/a1916302_large.jpg" alt="" class="sixth--pic">
-        </div>
+        </section>
 
-    </div>
+        <section class="table-3d">
+            <h1>tu bude kontakt</h1>
+        </section>
+
+    </main>
     <script>
         var i = 0;
         var images = ['/static/a1916302_large.jpg', '/static/custom-tables-bellevue-wa.jpg', '/static/mercedes-amg-c63-s-2018_14-clanokW.jpg', '/static/custom_tables_2048x.jpg'];
@@ -178,63 +179,63 @@
         var ButtonsFunc = document.getElementById("ButtonsFunc");
         var ButtonsFuncParag = document.getElementById("ButtonsFuncParag");
 
-        
-        var ThirdSecImages = ['/static/custom-tables-bellevue-wa.jpg' , '/static/custom_tables_2048x.jpg' , '/static/images.jpg' , '/static/custom_tables_2048x.jpg']
-        firstbutt.onclick = () =>{
-            setTimeout(function(){
+
+        var ThirdSecImages = ['/static/custom-tables-bellevue-wa.jpg', '/static/custom_tables_2048x.jpg', '/static/images.jpg', '/static/custom_tables_2048x.jpg']
+        firstbutt.onclick = () => {
+            setTimeout(function () {
                 textToChange.innerHTML = 'PRECO Lorem ipsum <em>dolor sit amet consectetur,</em> adipisicing elit. Harum accusantium omnis numquam fugit';
                 titleToChange.innerHTML = 'PRECO ';
-                document.thrdpartimg.src = ThirdSecImages[0]
+                document.ButtonsFuncImg.src = ThirdSecImages[0]
             }, 1000);
             ButtonsFunc.classList.add('animation');
             ButtonsFuncParag.classList.add('animation');
-            setTimeout(function(){
+            setTimeout(function () {
                 ButtonsFunc.classList.remove('animation');
                 ButtonsFuncParag.classList.remove('animation');
-            } , 2000)
+            }, 2000)
         }
-    
-        secbutt.onclick = () =>{
-            setTimeout(function(){
+
+        secbutt.onclick = () => {
+            setTimeout(function () {
                 textToChange.innerHTML = 'CO laborum sunt assumenda <strong>quisquam! Ad, accusamus ex nobis,</strong> enim beatae aspernatur nisi laudantium';
                 titleToChange.innerHTML = 'CO ';
-                document.thrdpartimg.src = ThirdSecImages[1]
+                document.ButtonsFuncImg.src = ThirdSecImages[1]
             }, 1000);
             ButtonsFunc.classList.add('animation');
             ButtonsFuncParag.classList.add('animation');
-            setTimeout(function(){
+            setTimeout(function () {
                 ButtonsFunc.classList.remove('animation');
                 ButtonsFuncParag.classList.remove('animation');
-            } , 2000)
+            }, 2000)
         }
 
-        thrdbutt.onclick = () =>{
-            setTimeout(function(){
+        thrdbutt.onclick = () => {
+            setTimeout(function () {
                 textToChange.innerHTML = 'NACO  accusamus ex nobis, enim beatae aspernatur nisi laudantium';
                 titleToChange.innerHTML = 'NACO ';
-                document.thrdpartimg.src = ThirdSecImages[2]
+                document.ButtonsFuncImg.src = ThirdSecImages[2]
             }, 1000);
-         
-            ButtonsFunc.classList.add('animation');  
-            ButtonsFuncParag.classList.add('animation'); 
-            setTimeout(function(){
+
+            ButtonsFunc.classList.add('animation');
+            ButtonsFuncParag.classList.add('animation');
+            setTimeout(function () {
                 ButtonsFunc.classList.remove('animation');
                 ButtonsFuncParag.classList.remove('animation');
-            } , 2000)
+            }, 2000)
         }
 
-        fourthbutt.onclick = () =>{
-            setTimeout(function(){
+        fourthbutt.onclick = () => {
+            setTimeout(function () {
                 textToChange.innerHTML = 'PRECO PRECOPRECOPRECO laborum sunt assumenda quisquam! Ad, accusamus ex nobis, enim beatae aspernatur nisi laudantium';
                 titleToChange.innerHTML = 'PRECO ';
-                document.thrdpartimg.src = ThirdSecImages[3]
+                document.ButtonsFuncImg.src = ThirdSecImages[3]
             }, 1000);
             ButtonsFunc.classList.add('animation');
             ButtonsFuncParag.classList.add('animation');
-            setTimeout(function(){
+            setTimeout(function () {
                 ButtonsFunc.classList.remove('animation');
                 ButtonsFuncParag.classList.remove('animation');
-            } , 2000)
+            }, 2000)
 
         }
     </script>

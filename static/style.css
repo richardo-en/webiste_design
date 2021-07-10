@@ -1,3 +1,4 @@
+/*public settings*/
 body{
     background-color: rgb(53, 46, 35); 
     overflow-x: hidden;
@@ -11,9 +12,19 @@ body{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
-    /*margin-top: 10vh;*/
     animation: ForLoading 0s ease;
     margin: 0;
+}
+article h1{
+    font-size: 1.4rem;
+}
+section{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;    
+    position: relative;
+    scroll-snap-align: start;
 }
 @keyframes ForLoading{
     0%{
@@ -45,10 +56,9 @@ p{
 /*::-webkit-scrollbar{
     display: none;
 }*/
-/* VIDEO TEST START ANIMATION */
-/* VIDEO TEST START ANIMATION */
-/* VIDEO TEST START ANIMATION */
 
+
+/*Loading Animation*/
 canvas {
     margin: 5% 0 5% 0;
     width: 100%;
@@ -85,38 +95,11 @@ canvas {
     }
 }
 
-
-
-
-
-
-.table-3d{
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    scroll-snap-align: start;
-}
-.table-3d h1{
-    line-height: 200px;
-    font-size: xxx-large;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 30px;
-}
-/* top bar animation video  */
-/* top bar animation video  */
-/* top bar animation video  */
+/*Landing Animation*/
 .landing-animation{
     background-color: black;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    max-width: 100%;    
-    position: relative;
-    scroll-snap-align: end;
 }
-.landing-animation .banner1{
+.landing-animation .wrapper{
     position: absolute;
     overflow: hidden;
     width: 100%;
@@ -124,7 +107,7 @@ canvas {
     left: 0;
     top: 0;   
 }
-#obrazek{
+.image{
     position: absolute;
     width: 120%;
     left: 50%;
@@ -180,40 +163,39 @@ canvas {
     }
 }
 
-/* END OF ANIMATION TOP BAR */
-/* END OF ANIMATION TOP BAR */
-/* END OF ANIMATION TOP BAR */
+/*Table In3d*/
+.table-3d h1{
+    line-height: 200px;
+    font-size: xxx-large;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+}
 
-/* START OF ITEMS */
-/* START OF ITEMS */
-/* START OF ITEMS */
-
-    .ButtonsFunc{
-        scroll-snap-align: start;
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-    } 
-    .ButtonsFunc img{
-        width: 100vw;
-        height: auto;        
+/*Buttons Function sect*/
+.ButtonsFunc{
+    overflow: hidden;
+} 
+.neco{
+    opacity: 100%;
+    width: 100vw;
+    height: auto;        
+    background-size: cover;
+}
+.neco.animation , .ParagraphSec.animation{
+    animation: fade-in-out 2s ease;
+}
+@keyframes fade-in-out{
+    50%{
+        opacity:3%;
     }
-    .neco{
+    100%{
         opacity: 100%;
     }
-    .neco.animation , .ParagraphSec.animation{
-        animation: fade-in-out 2s ease;
-    }
-    @keyframes fade-in-out{
-        50%{
-            opacity:3%;
-        }
-        100%{
-            opacity: 100%;
-        }
-    }
-    
-    .columnsInLine{
+}
+
+.columnsInLine{
         display: flex;
         justify-content: space-around;
         position: sticky;        
@@ -239,18 +221,19 @@ canvas {
     .ButtonsFunc .ParagraphSec .ChangeTitle{
         color: black;
     }
-    .ButtonsFunc p{
+    .ButtonsFunc p {
         color: black;
-        padding: 30px 30px 30px 30px;
+        padding: 5px 20px;
+        text-align: center;
     }
-    .ButtonsFunc .buttons  {
+    .ButtonsFunc .buttons-wraper  {
         display: flex;
         flex-flow: column;
         max-width: 20vw;
         width: 100%;
         justify-content: end;
     }
-    .ButtonsFunc .buttons button {
+    .ButtonsFunc .buttons-wraper button {
         background-color: #e0f3f7d8;
         border-radius: 15px;
         height: 8vh;
@@ -262,27 +245,13 @@ canvas {
         font-weight: 500;
 
     }
-/* END OF ITEMS */
-/* END OF ITEMS */
-/* END OF ITEMS */
+
+/*First Sections*/
 .first-section{
-    width: 100vw;
-    height: 100vh;  
-    scroll-snap-align: start;  
     background-color: blanchedalmond;
-    margin-top: -17px;
     z-index: 5;
 }
-.first-section .images-wrapper{
-    width: 100vw;  
-    height: 100vh;
-    background-color: blanchedalmond;
-}
-.ScrollMagic {
-    right: 10px;
-    width: 100vw;
-}
-.ScrollMagicText {
+.first-section-article {
     position: sticky;
     top: 30%; 
     left: 30%;
@@ -320,9 +289,11 @@ canvas {
     left: 350px;
     bottom: 150px;
 }
+
+
 .FirstImg.active {
     left: 50px;
-    bottom: 185px;
+    bottom: 160px;
 }
 .SecondImg.active{
     left: 900px;
@@ -335,15 +306,10 @@ canvas {
     left: 100px;
     bottom: 75px;
 }
-/* SECOND SECTION */
-/* SECOND SECTION */
-/* SECOND SECTION */
+
+/*Second Sections*/
 .second-section{
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start; 
     background-color: rgb(128, 108, 78);
-    position: relative;
     z-index: 10;
 }
 .second-section img{
@@ -352,7 +318,7 @@ canvas {
     overflow: hiiden;
     height: 100vh;
 }
-.SecondText{
+.second-section-text{
     position: relative;
     top: -80%;
     display: flex;
@@ -363,7 +329,7 @@ canvas {
     width: 100vw;
     background-color: white;
 }
-.SecondText p {
+.second-section-text p {
     width: 50vw;
 }
 .Changing-text-pos{
@@ -383,7 +349,7 @@ canvas {
     min-width: 25vw;
     height: 10vh;
     border-radius: 5px;
-    background-color: rgb(47 47 47);
+    background-color: rgb(51 51 51);
     color: white;
     line-height: 100px;
     font-weight: bold;
@@ -391,18 +357,10 @@ canvas {
     width: max-content;
     font-size: xxx-large;
 }
-/* END OF SECOND SEC */
-/* END OF SECOND SEC */
-/* END OF SECOND SEC */
 
-/* GALLERY */
-/* GALLERY */
-/* GALLERY */
-
+/*Gallery sections*/
 .gallery{
-    width: 100vw;
     height: 520vh;
-    scroll-snap-align: start;
     background-color: blanchedalmond;
     z-index: 20;
 }
@@ -424,38 +382,28 @@ canvas {
     height: auto;
     position: absolute;
     z-index: 20;
-    
 }
 .first--pic{
-    z-index: 4;
     width: 40%;
     margin: 40% 70% 20% 5%;
 }
 .sec--pic{
-    z-index: 1;
     width: 40%;
     margin: 1% 20% 1% 50%;
 }
 .thrd--pic{
-    z-index: 1;
     width: 35%;
     margin: 1%  60% 1% 10%;
 }
 .fourth--pic{
-    z-index: 11;
     width: 40%;
     margin: 1% 15% 1% 55%; 
 }
 .fifth--pic{
-    z-index: 1;
     width: 30%;
     margin: 1% 60% 1% 20%;
 }
 .sixth--pic{
-    z-index: 11;
     width: 40%;
     margin: 1% 25% 1% 40%;
 }
-/* END OF GALLERY */
-/* END OF GALLERY */
-/* END OF GALLERY */
